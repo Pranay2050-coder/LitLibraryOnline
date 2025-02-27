@@ -59,7 +59,7 @@
             <a class="nav-link" href="about.html"><h5>About</h5></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Register/register.html"><h5>Login</h5></a>
+            <a class="nav-link" href="{{ url_for('register') }}"><h5>Login</h5></a>
           </li>   
         </ul>
         <div
@@ -124,7 +124,7 @@
       <a href="about.html" class="me-3 text-white text-decoration-none">About</a>
       <a href="#" class="me-3 text-white text-decoration-none">Privacy</a>
       <a href="#" class="me-3 text-white text-decoration-none">Contact</a>
-      <a href="Register/register.html" class="me-3 text-white text-decoration-none">Login</a>
+      <a href="{{ url_for('register') }}" class="me-3 text-white text-decoration-none">Login</a>
     </div>
 
     <!-- Social Icons -->

@@ -6,6 +6,11 @@ app = Flask(__name__)
 # Load the cleaned dataset
 df = pd.read_csv("image_dataset_cleaned_5000.csv")
 
+@app.route('/register')
+def register():
+    return render_template('register.html')
+
+
 @app.route('/')
 def home():
     return render_template("main.html", books=df.to_dict(orient="records"))
