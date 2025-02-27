@@ -28,3 +28,49 @@ function loadBookDetails(bookId) {
     })
     .catch((error) => console.error("Error loading book details:", error));
 }
+
+
+//let lastScrollY = window.scrollY;
+//const footer = document.querySelector("footer");
+
+//window.addEventListener("scroll", () => {
+    //if (window.scrollY > lastScrollY) {
+        // Scrolling down - hide footer
+       // footer.style.bottom = "-100px";
+    //} else {
+        // Scrolling up - show footer
+      //  footer.style.bottom = "0";
+   // }
+   // lastScrollY = window.scrollY;
+//});
+
+/*const footer = document.querySelector("footer");
+
+window.addEventListener("scroll", () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        // Show footer when at the bottom
+        footer.style.bottom = "0";
+    } else {
+        // Hide footer when not at the bottom
+        footer.style.bottom = "-100px";
+    }
+});
+*/
+
+let lastScrollTop = 0;
+const footer = document.querySelector("footer");
+
+window.addEventListener("scroll", function () {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop) {
+        // Scrolling down, hide footer
+        footer.style.bottom = "-100px";
+    } else {
+        // Scrolling up, show footer
+        footer.style.bottom = "0";
+    }
+
+    lastScrollTop = scrollTop;
+});
+

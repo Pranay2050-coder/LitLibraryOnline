@@ -12,12 +12,50 @@
     />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='main.css') }}"
+      href="{{ url_for('static', filename='book.css') }}"
     />
+    
   </head>
   <body>
     <a href="/">Back to Home</a>
-    <h1>{{ book.title }}</h1>
+
+    <div class="card mb-3" style="max-width: 540px;" loading="lazy">
+      <div class="row g-0" loading="lazy">
+        <div class="col-md-4" loading="lazy">
+          <img src="{{ book.image_url }}" class="img-fluid rounded-start" alt="Book Cover" loading="lazy">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title" loading="lazy"><b>{{ book.title }}</b></h5>
+            <p class="card-text" loading="lazy">
+              <strong>Author:</strong> {{ book.contributor }}
+            </p>
+            <p class="card-text" loading="lazy">
+              <strong>Published:</strong> {{ book.date }}
+            </p>
+            <p class="card-text" loading="lazy">
+              <strong>Language:</strong> {{ book.language }}
+            </p>
+            <p class="card-text" loading="lazy">
+              <strong>Subject:</strong> {{ book.subject }}
+            </p>
+            <p class="card-text" loading="lazy">
+              <strong>Description:</strong> {{ book.description }}
+            </p>
+            <a
+              href="{{ book.url }}"
+              class="btn btn-primary"
+              target="_blank"
+              loading="lazy"
+              >Read Online</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!--   <h1>{{ book.title }}</h1>
     <div class="card" >
       <img
         src="{{ book.image_url }}"
@@ -47,7 +85,7 @@
           target="_blank"
           loading="lazy"
           >Read Online</a
-        >
+        >    -->
       </div>
     </div>
   </body>
