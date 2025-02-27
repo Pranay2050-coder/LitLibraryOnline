@@ -11,11 +11,29 @@ body {
 
 /* Styling for the card */
 .card {
-    max-width: 700px; /* Increased width */
+    position: relative; /* Add relative positioning to the card */
+    max-width: 900px; /* Increased width */
     width: 100%;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
     border-radius: 10px;
     background: white;
+}
+
+/* Back to home link styling */
+.back-to-home {
+    position: absolute; /* Position the link absolutely within the card */
+    top: 10px; /* Adjust the top position as needed */
+    left: 50%; /* Center the link horizontally */
+    transform: translateX(-50%); /* Center the link horizontally */
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #007bff; /* Bootstrap primary color */
+    font-weight: bold;
+    background: white; /* Background color to make it stand out */
+    padding: 5px 10px; /* Padding for better appearance */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
 }
 
 /* Ensure the image fits well */
@@ -24,7 +42,7 @@ body {
     height: 100%;
     object-fit: cover;
     border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /* Responsive adjustments */
@@ -34,6 +52,6 @@ body {
     }
 
     .card img {
-        border-radius: 10px 10px 0 0;
+        border-radius: 10px 10px 0 0; /* Ensure the image fits well within the card */
     }
 }
